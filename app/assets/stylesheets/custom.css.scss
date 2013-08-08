@@ -1,0 +1,130 @@
+@import "bootstrap";
+
+html {
+	overflow-y: scroll;	
+}
+body {
+	padding-top: 60px;
+}
+section {
+	overflow: auto;
+}
+textarea {
+	resize: vertical;
+	height: 200px;
+	width: 95%
+
+}
+section {
+	margin: 10px;
+}
+.center {
+	text-align: center;
+}
+.justify {
+	text-align: justify;
+}
+.left {
+	text-align: right;
+}
+.footer {
+	margin: 100px 0;
+	padding-top: 10px;
+	border-top: 1px solid #eaeaea;
+	color: #999;
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li{
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
+.signupRow {
+	border: 1px solid #eaeaea;
+	padding: 10px 40px;
+	background-color: #eee;
+}
+.signupButton {
+	display: block;
+	margin-left: 50px;
+}
+.errorExplanation {
+	color: #f00;
+	ul {
+		list-style: none;
+	}
+}
+.field_with_errors {
+  	@extend .control-group;
+  	@extend .error;
+}
+.showRow {
+	border-bottom: 3px solid #eaeaea;
+}
+.indexList {
+	list-style: none;
+	display: inline-block;
+	margin: 20px;
+
+	
+	li {
+		overflow: auto;
+		border: 1px solid $grayLighter;
+	}
+}
+.sessionsNewTop {
+	padding-top: 100px;
+	div {
+		border: 1px solid #eaeaea;
+		padding: 10px 30px;
+	}
+}
+.signinDiv{
+	background-color: #eee;
+	
+}
+.signintext {
+	display: block;
+}
+.signinButton {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.imageBottomText {
+	margin-top: 10px;
+}
+.update {
+	margin-top: 50px;	
+}
+
+
+.postList {
+	border: 1px solid #e8e8e8;
+	text-align: justify;
+	padding: 10px;
+	list-style: none;
+}
+.postTime {
+	float: right;
+	color: #999;
+	text-align: right;
+}
+.userposts {
+	list-style: none;
+	margin: 10px 0 0 0;
+	li {
+		margin: 10px 0;
+		padding: 10px 0;
+		border: 1px solid #e8e8e8;
+	}
+}
+.content {
+	display: block;
+	text-align: justify;
+}
+

@@ -1,0 +1,4 @@
+== README
+
+This is a simple application for cseclaws to share their memories.
+log in with appropriate user name and password to continue. 

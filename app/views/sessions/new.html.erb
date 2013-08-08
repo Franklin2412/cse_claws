@@ -1,0 +1,34 @@
+
+<% if signed_in? %>
+	<p>
+		<h3><strong>Greetings form Cseclaws.....</strong></h3>
+		
+	</p>
+	
+<% else %>
+<% provide(:title, "Sign in") %>
+
+<div class="row sessionsNewTop">
+	<div class="span4 center">
+		<p> One good friend is worth thousand books...</p>
+		<%= link_to image_tag("homeimage.png"),'#' %>
+		<p class="imageBottomText">  Thank God for blessing me with 67+...</p>
+	</div>
+	<div class="span3 offset2 signinDiv">
+		<strong class="signintext"> Sign in </strong> 
+		                
+		<%= form_for(:session, url: sessions_path) do |f| %>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.submit "Sign in", class: "btn btn-primary signinButton" %>
+			Guest User? <%= link_to "Glimpse", users_path %>
+		<% end %>
+			 
+	</div>
+</div>
+<% end %>

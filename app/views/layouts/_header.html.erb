@@ -1,0 +1,30 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<nav>
+				<ul class="nav pull-right">
+					<li><%= link_to "Claws", users_path %></li>
+					<li><%= link_to "Sign in", root_path unless signed_in? %></li>
+					<% if signed_in? %>
+						
+						<li><%= link_to "Create An Account", new_user_path if current_user.admin? %></li>
+                		<li id="fat-menu" class="dropdown">
+              				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                				Account <b class="caret"></b>
+              				</a>
+              				<ul class="dropdown-menu">
+              					<li><%= link_to "Profile", user_path(current_user) %></li>
+                				<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                				<li class="divider"></li>
+                				<li>
+                  					<%= link_to "Sign out", signout_path, method: "delete" %>
+                				</li>
+              				</ul>
+            			</li>
+					<% end %>
+				</ul>
+			</nav>
+			<%= link_to image_tag("cseclaws.png"),'#' %>
+		</div>
+	</div>
+</header>

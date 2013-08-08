@@ -1,0 +1,47 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+	<section class="span4 showRow">
+		<section>
+			<%= image_tag @user.image_url %>
+		</section>
+		<section class="showRow">
+			<%= @user.name %>
+		</section>
+		<section>
+			<%= form_for([@user, @user.posts.build]) do |f| %>
+				<%= f.hidden_field :profile_id, :value => current_user.id %>
+				<%= f.text_area :content, placeholder: "Compose here...." %>
+				<%= f.submit :post, class: "btn btn-primary" %> 
+			<% end %>
+		</section>
+	</section>
+	
+	
+	<section class="span7">
+		<% @user.posts.each do |post| %>
+		
+		<ol class="postList">
+			<li>
+			<section>
+				<%= link_to "User-#{post.profile_id}", user_path(post.profile_id) %>
+				<span class="postTime">
+					
+					Posted <%= timeago_tag post.created_at, :nojs => true %>	
+											
+						<% if current_user.admin? %>
+							<%= link_to 'Delete', [post.user, post ],
+               					method: :delete,data: { confirm: 'Are you sure?' } %>
+               			<% end %>	
+               			
+               	</span>
+			</section>
+			<section>
+				<%= post.content %>
+			</section>
+			</li>
+		</ol>
+		<% end %>
+	
+	</section>
+		
+</div>

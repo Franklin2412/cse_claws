@@ -1,0 +1,25 @@
+<% provide(:title, "Claws") %>
+<h1 class="center"> List of Talons </h1>
+<ul>
+	<% @users.each do |user| %>
+		<li class="indexList">
+			<div class="row">
+				<%=  image_tag user.image_url %>
+			</div>
+			<div class="row">
+				<% if signed_in? %>
+					<%= link_to user.name, user %>
+				<% else %>
+					<%= user.name %>
+				<% end %>
+			</div>
+			<% if signed_in? %>
+				<div class="row">
+					<% if current_user.admin? && !current_user?(user) %>
+    					<%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+                	<% end %>
+				</div>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
