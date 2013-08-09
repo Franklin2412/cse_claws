@@ -1,4 +1,2 @@
 == README
-
-This is a simple application for cseclaws to share their memories.
-log in with appropriate user name and password to continue. 
+Social network with basic features for a closed group
