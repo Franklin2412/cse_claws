@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20130812052310) do
 
   create_table "posts", force: true do |t|
-    t.text     "content"
+    t.text     "content",    limit: 255
     t.string   "user_id"
     t.string   "profile_id"
     t.datetime "created_at"
