@@ -15,6 +15,7 @@ textarea {
 	width: 95%
 
 }
+
 section {
 	margin: 10px;
 }
@@ -65,16 +66,22 @@ section {
 }
 .showRow {
 	border-bottom: 3px solid #eaeaea;
+	img {
+		height: 250px;
+		width: 250px;
+	}
 }
 .indexList {
 	list-style: none;
 	display: inline-block;
 	margin: 20px;
-
-	
 	li {
 		overflow: auto;
 		border: 1px solid $grayLighter;
+	}
+	img {
+		height: 200px;
+		width: 200px;
 	}
 }
 .sessionsNewTop {
@@ -127,4 +134,5 @@ section {
 	display: block;
 	text-align: justify;
 }
+
 
